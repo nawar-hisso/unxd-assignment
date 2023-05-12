@@ -73,7 +73,7 @@ Distributed under the MIT License. See LICENSE for more information.
 
 Nawar Hisso - nawwarhisso@gmail.com
 
-Project Link: https://github.com/nawar-hisso/unxd-assignment
+Project Link: https://unxd.netlify.app/
 
 ## 🤝 Contributing
 
