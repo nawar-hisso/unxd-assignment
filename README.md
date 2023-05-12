@@ -2,7 +2,7 @@
 
 Welcome to the UNXD Event React app. This app is a gateway to participate in exciting UNXD events. All you need is your Metamask wallet and a qualifying NFT!
 
-![UNXD Event App Preview](./public/logo_light.png)
+![UNXD Event App Preview](./public/logo_dark.png)
 
 ## 🎯 Features
 
