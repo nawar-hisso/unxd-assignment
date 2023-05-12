@@ -7,6 +7,7 @@
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.11.1",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -14,7 +15,11 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint --ext .js src && eslint --ext .jsx src",
+    "lint:fix": "npx eslint --ext .js src && eslint --ext .jsx src --fix",
+    "prepare": "husky install",
+    "cont-int": "npm test && npm run lint"
   },
   "eslintConfig": {
     "extends": [
@@ -50,6 +55,7 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-security": "^1.7.1",
+    "husky": "^8.0.3",
     "prettier": "^2.8.8"
   }
 }
