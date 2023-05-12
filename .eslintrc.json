@@ -1,0 +1,117 @@
+{
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:security/recommended",
+    "plugin:no-unsanitized/DOM",
+    "plugin:jsonc/base"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "react-hooks",
+    "no-unsanitized",
+    "no-secrets",
+    "prettier"
+  ],
+  "rules": {
+    "quotes": [
+      "error",
+      "single",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "no-underscore-dangle": "off",
+    "no-console": "warn",
+    "linebreak-style": ["error", "unix"],
+    "react/function-component-definition": [
+      2,
+      {
+        "namedComponents": "arrow-function",
+        "unnamedComponents": "arrow-function"
+      }
+    ],
+    "import/prefer-default-export": ["off"],
+    "react/jsx-uses-react": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+    "react/jsx-props-no-spreading": ["warn"],
+    "no-shadow": "off",
+    "no-unsanitized/method": "error",
+    "no-unsanitized/property": "error",
+    "no-secrets/no-secrets": [
+      "error",
+      {
+        "additionalRegexes": {
+          "Basic Auth": "Authorization: Basic [A-Za-z0-9+/=]*"
+        },
+        "ignoreContent": "^ABCD",
+        "ignoreIdentifiers": ["BASE64_CHARS"],
+        "additionalDelimiters": [".", "(?=[A-Z][a-z])"]
+      }
+    ],
+    "spaced-comment": [
+      "off",
+      "never",
+      {
+        "exceptions": [],
+        "markers": null,
+        "line": {
+          "exceptions": ["-", "+"],
+          "markers": ["=", "!", "/"]
+        },
+        "block": {
+          "exceptions": ["-", "+"],
+          "markers": ["=", "!", ":", "::"],
+          "balanced": true
+        }
+      }
+    ],
+    "no-use-before-define": ["off"],
+    "no-unused-vars": ["warn"],
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": [
+      "off",
+      {
+        "ignore": [],
+        "customValidators": [],
+        "skipUndeclared": false
+      }
+    ],
+    "radix": ["off", "always"],
+    "new-cap": [
+      "off",
+      {
+        "newIsCap": true,
+        "capIsNew": false,
+        "newIsCapExceptions": [],
+        "newIsCapExceptionPattern": null,
+        "capIsNewExceptions": [
+          "Immutable.Map",
+          "Immutable.Set",
+          "Immutable.List"
+        ],
+        "capIsNewExceptionPattern": null,
+        "properties": true
+      }
+    ]
+  }
+}
