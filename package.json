@@ -18,8 +18,8 @@
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js src && eslint --ext .jsx src",
     "lint:fix": "npx eslint --ext .js src && eslint --ext .jsx src --fix",
-    "prepare": "husky install",
-    "cont-int": "npm test && npm run lint"
+    "cont-int": "npm test && npm run lint",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
