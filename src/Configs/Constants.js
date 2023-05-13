@@ -1,5 +1,4 @@
-const REDIRECT_URI =
-  process.env.REACT_APP_REDIRECT_URI || 'http://localhost:3000';
+const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI || 'localhost:3000';
 
 const CONSTANTS = { REDIRECT_URI };
 
