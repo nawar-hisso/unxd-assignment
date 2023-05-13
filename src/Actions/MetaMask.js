@@ -15,6 +15,9 @@ export const connectToMetaMask = async dispatch => {
       });
 
       setWallet(dispatch, address);
+    } else if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // We're on mobile
+      window.location.href = 'https://metamask.app.link/dapp/unxd.netlify.app/';
     } else {
       metaMaskOnboarding();
     }
