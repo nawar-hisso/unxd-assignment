@@ -8,3 +8,12 @@ export function setWallet(dispatch, wallet) {
 
   dispatch(action);
 }
+
+export function setCollections(dispatch, collections) {
+  const action = {
+    type: ACTION_TYPES.APP.SET_COLLECTIONS,
+    payload: collections,
+  };
+
+  dispatch(action);
+}
