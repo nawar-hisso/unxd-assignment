@@ -1,10 +1,15 @@
 import { render, screen } from '@testing-library/react';
+import { MemoryRouter } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import Footer from './Footer';
 
 describe('Footer', () => {
   it('renders the footer with correct content', () => {
-    render(<Footer />);
+    render(
+      <MemoryRouter>
+        <Footer />
+      </MemoryRouter>,
+    );
 
     // Check the content in the left section
     const leftSection = screen.getByTestId('footer-left');
