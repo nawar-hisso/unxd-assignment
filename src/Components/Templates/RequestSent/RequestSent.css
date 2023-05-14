@@ -24,3 +24,8 @@
     }
   }
 }
+
+.MetaMaskMobile .request-sent {
+  height: 110vh;
+  padding-bottom: 0vh;
+}

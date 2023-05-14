@@ -23,3 +23,8 @@
     }
   }
 }
+
+.MetaMaskMobile .registration-form {
+  height: 110vh;
+  padding-bottom: 0vh;
+}
