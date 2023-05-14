@@ -1,12 +1,12 @@
 const APP_NAME = 'UNXD';
 const COLLECTION_CLASSES = {
-  PLATINUM: {
-    NAME: 'PLATINUM',
+  PLATINUM_BOX: {
+    NAME: 'PLATINUM_BOX',
     MIN: 0,
     MAX: 75,
   },
-  GOLD: {
-    NAME: 'GOLD',
+  GOLD_BOX: {
+    NAME: 'GOLD_BOX',
     MIN: 76,
     MAX: 750,
   },

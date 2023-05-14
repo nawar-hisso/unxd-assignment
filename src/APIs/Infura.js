@@ -70,15 +70,15 @@ export const fetchDGFamily = async address => {
       const tokenId = parseInt(asset.tokenId);
 
       if (
-        tokenId >= COMMON.COLLECTION_CLASSES.PLATINUM.MIN &&
-        tokenId <= COMMON.COLLECTION_CLASSES.PLATINUM.MAX
+        tokenId >= COMMON.COLLECTION_CLASSES.PLATINUM_BOX.MIN &&
+        tokenId <= COMMON.COLLECTION_CLASSES.PLATINUM_BOX.MAX
       ) {
-        classification = COMMON.COLLECTION_CLASSES.PLATINUM.NAME;
+        classification = COMMON.COLLECTION_CLASSES.PLATINUM_BOX.NAME;
       } else if (
-        tokenId >= COMMON.COLLECTION_CLASSES.GOLD.MIN &&
-        tokenId <= COMMON.COLLECTION_CLASSES.GOLD.MAX
+        tokenId >= COMMON.COLLECTION_CLASSES.GOLD_BOX.MIN &&
+        tokenId <= COMMON.COLLECTION_CLASSES.GOLD_BOX.MAX
       ) {
-        classification = COMMON.COLLECTION_CLASSES.GOLD.NAME;
+        classification = COMMON.COLLECTION_CLASSES.GOLD_BOX.NAME;
       } else {
         classification = COMMON.COLLECTION_CLASSES.BLACK_BOX.NAME;
       }
