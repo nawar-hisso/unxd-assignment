@@ -10,6 +10,7 @@ import WALLET from '../../../Configs/Wallet';
 const HomePage = () => {
   const dispatch = useDispatch();
   const [promptOpen, setPromptOpen] = useState(false);
+  const [connectWalletIsDisabled, setConnectWalletIsDisabled] = useState(false);
   const [connectionStatus, setConnectionStatus] = useState(
     WALLET.CONNECTION_STATUSES.CONNECTED,
   );
@@ -24,9 +25,11 @@ const HomePage = () => {
   };
 
   const connectWallet = async () => {
+    setConnectWalletIsDisabled(true);
     const connection = await connectToMetaMask(dispatch);
     setConnectionStatus(connection);
     setPromptOpen(!promptOpen);
+    setConnectWalletIsDisabled(false);
   };
 
   const renderModalContent = () => {
@@ -96,7 +99,11 @@ const HomePage = () => {
           </p>
 
           <div className="submit">
-            <CustomButton title="Connect Wallet" handler={connectWallet} />
+            <CustomButton
+              title="Connect Wallet"
+              handler={connectWallet}
+              isDisabled={connectWalletIsDisabled}
+            />
           </div>
         </div>
       </div>

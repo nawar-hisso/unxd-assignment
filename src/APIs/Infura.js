@@ -15,7 +15,7 @@ export const fetchGlassBox = async address => {
 
   try {
     const response = await axios.get(
-      `https://nft.api.infura.io/networks/${WALLET.CHAIN_ID}/nfts/${CONTRACTS.GLASS_BOX_COLLECTION}/owners`,
+      `https://nft.api.infura.io/networks/${WALLET.CHAIN.ID}/nfts/${CONTRACTS.GLASS_BOX_COLLECTION}/owners`,
       {
         headers: {
           Authorization: `Basic ${Auth}`,
@@ -51,7 +51,7 @@ export const fetchDGFamily = async address => {
 
   try {
     const response = await axios.get(
-      `https://nft.api.infura.io/networks/${WALLET.CHAIN_ID}/nfts/${CONTRACTS.DG_FAMILY_COLLECTION}/owners`,
+      `https://nft.api.infura.io/networks/${WALLET.CHAIN.ID}/nfts/${CONTRACTS.DG_FAMILY_COLLECTION}/owners`,
       {
         headers: {
           Authorization: `Basic ${Auth}`,

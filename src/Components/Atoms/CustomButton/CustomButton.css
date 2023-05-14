@@ -4,3 +4,8 @@
   padding: 10px 30px 10px 30px;
   cursor: pointer;
 }
+
+.custom-button:disabled {
+  color: gray;
+  cursor: not-allowed;
+}

@@ -4,7 +4,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import ROUTES_NAMES from './Configs/RoutesNames';
-import { changeWalletListener } from './Actions/MetaMask';
+import {
+  changeChainListener,
+  changeWalletListener,
+  insureRightChain,
+} from './Actions/MetaMask';
 import Header from './Components/Molecules/Header/Header';
 import Footer from './Components/Molecules/Footer/Footer';
 import HomePage from './Components/Templates/HomePage/HomePage';
@@ -20,6 +24,14 @@ const App = () => {
   useEffect(() => {
     changeWalletListener(dispatch);
   }, [dispatch]);
+
+  useEffect(() => {
+    changeChainListener();
+  }, []);
+
+  useEffect(() => {
+    insureRightChain();
+  }, []);
 
   return (
     <>

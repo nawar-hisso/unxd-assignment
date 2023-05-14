@@ -12,7 +12,9 @@ const Header = () => {
       <div className="navbar">
         <ul>
           <li className="logo-element">
-            <img src={logo} alt="logo" className="logo" />
+            <Link style={{ color: 'black' }} to={ROUTES_NAMES.HOME}>
+              <img src={logo} alt="logo" className="logo" />
+            </Link>
           </li>
           <li>
             <ul className="pages">

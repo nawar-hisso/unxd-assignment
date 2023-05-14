@@ -22,7 +22,7 @@ const Footer = () => {
             <p>Marketplace</p>
             <p>Featured</p>
             <p>About</p>
-            <p>Helpcenter</p>
+            <p>Help Center</p>
           </div>
         </div>
         <div className="footer-right">

@@ -1,4 +1,5 @@
 import MetaMaskOnboarding from '@metamask/onboarding';
+import { ethers, utils } from 'ethers';
 import WALLET from '../Configs/Wallet';
 import HELPERS from '../Utils/Helpers';
 import { setWallet } from './App';
@@ -20,6 +21,11 @@ export const connectToMetaMask = async dispatch => {
       setWallet(dispatch, address);
 
       if (address) {
+        const chainId = await getChainId();
+        if (chainId !== WALLET.CHAIN.ID) {
+          await switchChain();
+        }
+
         const collections = await fetchNFTs(dispatch, address);
 
         if (collections?.length === 0) {
@@ -75,5 +81,72 @@ export const changeWalletListener = dispatch => {
     };
 
     window.ethereum.on(WALLET.CHANGE_WALLET_EVENT, handleChangeAccount);
+  }
+};
+
+export const changeChainListener = () => {
+  if (HELPERS.isMetaMaskInstalled()) {
+    const handleChangeChain = async () => {
+      await switchChain();
+    };
+
+    window.ethereum.on(WALLET.CHANGE_CHAIN_EVENT, handleChangeChain);
+  }
+};
+
+const getChainId = async () => {
+  try {
+    const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
+    const { chainId } = await provider.getNetwork();
+    return chainId;
+  } catch {
+    return WALLET.CHAIN.ID;
+  }
+};
+
+const switchChain = async () => {
+  try {
+    await window.ethereum.request({
+      method: WALLET.SWITCH_CHAIN_REQUEST_METHOD,
+      params: [
+        {
+          chainId: utils.hexValue(WALLET.CHAIN.ID),
+        },
+      ],
+    });
+  } catch (error) {
+    if (error.code === WALLET.CHAIN_NOT_ADDED_CODE) {
+      addEthereumNetwork();
+    }
+  }
+};
+
+const addEthereumNetwork = async () => {
+  try {
+    await window.ethereum.request({
+      method: WALLET.ADD_CHAIN_REQUEST_METHOD,
+      params: [
+        {
+          chainId: utils.hexValue(WALLET.CHAIN.ID),
+          chainName: WALLET.CHAIN.NAME,
+          nativeCurrency: {
+            name: WALLET.CHAIN.CURRENCY.NAME,
+            symbol: WALLET.CHAIN.CURRENCY.SYMBOL,
+            decimals: WALLET.CHAIN.CURRENCY.DECIMALS,
+          },
+          rpcUrls: [WALLET.CHAIN.RPC_URL],
+          blockExplorerUrls: [WALLET.CHAIN.BLOCK_EXPLORER_URL],
+        },
+      ],
+    });
+  } catch (error) {
+    //
+  }
+};
+
+export const insureRightChain = async () => {
+  const chainId = await getChainId();
+  if (chainId !== WALLET.CHAIN.ID) {
+    await switchChain();
   }
 };
