@@ -82,6 +82,14 @@
   margin-top: 20px;
 }
 
+a {
+  color: white;
+}
+
+p a {
+  color: #a0a0a0;
+}
+
 @media screen and (max-width: 800px) {
   .in-footer {
     width: 90%;
