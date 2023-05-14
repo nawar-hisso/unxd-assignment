@@ -2,12 +2,15 @@ import MetaMaskOnboarding from '@metamask/onboarding';
 import WALLET from '../Configs/Wallet';
 import HELPERS from '../Utils/Helpers';
 import { setWallet } from './App';
+import { fetchNFTs } from '../APIs/Infura';
 
 const onboarding = new MetaMaskOnboarding({
   forwarderOrigin: WALLET.REDIRECT_URI,
 });
 
 export const connectToMetaMask = async dispatch => {
+  let status = WALLET.CONNECTION_STATUSES.CONNECTED;
+
   try {
     if (HELPERS.isMetaMaskInstalled()) {
       const [address] = await window.ethereum.request({
@@ -15,31 +18,56 @@ export const connectToMetaMask = async dispatch => {
       });
 
       setWallet(dispatch, address);
+
+      if (address) {
+        const collections = await fetchNFTs(dispatch, address);
+
+        if (collections?.length === 0) {
+          setWallet(dispatch, '');
+          status = WALLET.CONNECTION_STATUSES.NO_COLLECTIONS;
+        }
+      }
     } else if (HELPERS.openedFromMobile()) {
       window.location.href = WALLET.METAMASK_MOBILE_BROWSER;
+      status = WALLET.CONNECTION_STATUSES.ON_MOBILE;
     } else {
-      metaMaskOnboarding();
+      status = WALLET.CONNECTION_STATUSES.ONBOARDING;
     }
+
+    return status;
   } catch (error) {
     if (error.code === WALLET.CANCEL_CODE) {
-      // console.log('Cancelled');
+      status = WALLET.CONNECTION_STATUSES.CANCELLED;
     } else {
-      // console.log(error);
+      status = WALLET.CONNECTION_STATUSES.ERROR;
     }
+
+    return status;
   }
 };
 
-export const metaMaskOnboarding = () => {
+export const onboardMetaMask = () => {
+  metaMaskOnboarding();
+};
+
+const metaMaskOnboarding = () => {
   onboarding.startOnboarding();
 };
 
 export const changeWalletListener = dispatch => {
   if (HELPERS.isMetaMaskInstalled()) {
-    const handleChangeAccount = accounts => {
+    const handleChangeAccount = async accounts => {
       if (accounts === []) {
         setWallet(dispatch, '');
       } else {
         setWallet(dispatch, accounts[0]);
+        if (accounts[0]) {
+          const collections = await fetchNFTs(dispatch, accounts[0]);
+
+          if (collections?.length === 0) {
+            setWallet(dispatch, '');
+          }
+        }
       }
     };
 
