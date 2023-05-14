@@ -1,0 +1,25 @@
+.registration-form {
+  font-family: 'LabGrotesque-Thin';
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registration-form-content {
+  width: 40vw;
+}
+
+.registration-form-content h1 {
+  font-family: 'GothiaSerif-Bold';
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  @media screen and (max-width: 650px) {
+    .registration-form-content {
+      width: 90vw;
+    }
+  }
+}
