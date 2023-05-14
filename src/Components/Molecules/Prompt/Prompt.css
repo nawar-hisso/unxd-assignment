@@ -1,0 +1,48 @@
+.modal {
+  font-family: 'LabGrotesque-Thin';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal h2 {
+  font-family: 'GothiaSerif-Bold';
+}
+
+.modal.show {
+  opacity: 1;
+  pointer-events: visible;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 0;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  position: relative;
+  animation: modal-show 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid black;
+}
+
+@keyframes modal-show {
+  from {
+    transform: scale(0.7);
+  }
+  to {
+    transform: scale(1);
+  }
+}
