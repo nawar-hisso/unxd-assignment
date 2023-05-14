@@ -11,7 +11,6 @@ describe('Footer', () => {
       </MemoryRouter>,
     );
 
-    // Check the content in the left section
     const leftSection = screen.getByTestId('footer-left');
     expect(leftSection).toBeInTheDocument();
     expect(screen.getByAltText('white_logo')).toBeInTheDocument();
@@ -19,7 +18,6 @@ describe('Footer', () => {
       "UNXD ('Uncrossed) is a marketplace for digitally authentic art, fashion, and experiences.",
     );
 
-    // Check the content in the center section
     const centerSection = screen.getByTestId('footer-center');
     expect(centerSection).toBeInTheDocument();
     expect(centerSection).toHaveTextContent('Navigate');
@@ -29,7 +27,6 @@ describe('Footer', () => {
     expect(screen.getByText('About')).toBeInTheDocument();
     expect(screen.getByText('Help Center')).toBeInTheDocument();
 
-    // Check the content in the right section
     const rightSection = screen.getByTestId('footer-right');
     expect(rightSection).toBeInTheDocument();
     expect(rightSection).toHaveTextContent('Newsletter');
@@ -40,7 +37,6 @@ describe('Footer', () => {
     expect(screen.getByAltText('twitter')).toBeInTheDocument();
     expect(screen.getByAltText('link')).toBeInTheDocument();
 
-    // Check the content in the last section
     const lastSection = screen.getByTestId('footer-last');
     expect(lastSection).toBeInTheDocument();
     expect(screen.getByText('Privacy')).toBeInTheDocument();

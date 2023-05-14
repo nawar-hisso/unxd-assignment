@@ -1,4 +1,3 @@
-// AppActions.test.js
 import ACTION_TYPES from '../../Configs/ActionTypes';
 import { setWallet, setCollections, setFormSubmitted } from './App';
 

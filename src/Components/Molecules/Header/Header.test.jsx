@@ -3,13 +3,16 @@ import '@testing-library/jest-dom/extend-expect';
 import { MemoryRouter } from 'react-router-dom';
 import Header from './Header';
 import ROUTES_NAMES from '../../../Configs/RoutesNames';
+import Store from '../../../Store';
 
 describe('Header', () => {
   it('renders the header logo', () => {
     render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Store>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </Store>,
     );
 
     const logoElement = screen.getByAltText('logo');
@@ -18,9 +21,11 @@ describe('Header', () => {
 
   it('renders the header links', () => {
     render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Store>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </Store>,
     );
 
     const dropsLink = screen.getByText('Drops');
@@ -34,9 +39,11 @@ describe('Header', () => {
 
   it('renders the header icons', () => {
     render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Store>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </Store>,
     );
 
     const searchIcon = screen.getByAltText('search');
@@ -50,9 +57,11 @@ describe('Header', () => {
 
   it('navigates to the correct routes when links are clicked', () => {
     render(
-      <MemoryRouter>
-        <Header />
-      </MemoryRouter>,
+      <Store>
+        <MemoryRouter>
+          <Header />
+        </MemoryRouter>
+      </Store>,
     );
 
     const dropsLink = screen.getByText('Drops');

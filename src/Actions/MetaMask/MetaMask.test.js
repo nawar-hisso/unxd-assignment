@@ -1,4 +1,3 @@
-// MetaMask.test.js
 import { ethers } from 'ethers';
 import { setWallet } from '../App/App';
 import { fetchNFTs } from '../../APIs/Infura';
