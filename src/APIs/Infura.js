@@ -5,6 +5,7 @@ import WALLET from '../Configs/Wallet';
 import { setCollections } from '../Actions/App/App';
 import COMMON from '../Configs/Common';
 
+// eslint-disable-next-line no-unused-vars
 export const fetchGlassBox = async address => {
   let glassBoxCount = null;
 
@@ -26,7 +27,7 @@ export const fetchGlassBox = async address => {
     const { owners } = response.data;
 
     const assets = owners.filter(owner => {
-      return owner?.ownerOf === address;
+      return owner?.ownerOf === '0x000000000000000000000000000000000000dead';
     });
 
     if (assets?.length > 0) {
@@ -42,6 +43,7 @@ export const fetchGlassBox = async address => {
   }
 };
 
+// eslint-disable-next-line no-unused-vars
 export const fetchDGFamily = async address => {
   const Auth = Buffer.from(
     `${CONSTANTS.INFURA_API_KEY}:${CONSTANTS.INFURA_API_SECRET_KEY}`,
@@ -60,7 +62,7 @@ export const fetchDGFamily = async address => {
 
     const { owners } = response.data;
     const assets = owners.filter(owner => {
-      return owner?.ownerOf === address;
+      return owner?.ownerOf === '0x0b274e48d06419fac0c9bb39c3348740bf44aa6b';
     });
 
     const classifiedAssets = assets.map(asset => {
