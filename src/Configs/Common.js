@@ -26,6 +26,9 @@ const EMAIL_REGEX =
   // eslint-disable-next-line security/detect-unsafe-regex
   /^[\w.!#$%&'*+/=?^`{|}~-]+@[a-zA-Z\d-]+(?:\.[a-zA-Z\d-]+)*$/;
 
+const MOBILE_REGEX =
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i;
+
 const INPUT_REQUIRED = 'INPUT_REQUIRED';
 const INVALID_EMAIL = 'INVALID_EMAIL';
 const FORM_SUCCESS = 'FORM_SUCCESS';
@@ -38,6 +41,7 @@ const COMMON = {
   APP_NAME,
   COLLECTION_CLASSES,
   EMAIL_REGEX,
+  MOBILE_REGEX,
   FORM_STATUSES,
   DOWNLOADED_FILE_NAME,
 };
