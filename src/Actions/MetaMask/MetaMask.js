@@ -5,9 +5,7 @@ import HELPERS from '../../Utils/Helpers';
 import { setWallet } from '../App/App';
 import { fetchNFTs } from '../../APIs/Infura';
 
-const onboarding = new MetaMaskOnboarding({
-  forwarderOrigin: WALLET.REDIRECT_URI,
-});
+const onboarding = new MetaMaskOnboarding();
 
 export const connectToMetaMask = async dispatch => {
   let status = WALLET.CONNECTION_STATUSES.CONNECTED;
