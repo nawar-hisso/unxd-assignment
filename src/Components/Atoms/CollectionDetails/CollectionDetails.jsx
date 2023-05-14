@@ -12,7 +12,7 @@ const CollectionDetails = ({ message }) => {
   const [platinumBox, setPlatinumBox] = useState(0);
 
   useEffect(() => {
-    app?.collections?.map(collection => {
+    app?.collections?.forEach(collection => {
       switch (collection?.class) {
         case COMMON.COLLECTION_CLASSES.GLASS_BOX.NAME:
           setGlassBox(collection?.count);
@@ -29,7 +29,6 @@ const CollectionDetails = ({ message }) => {
         default:
           break;
       }
-      return collection;
     });
   }, [app?.collections]);
 
