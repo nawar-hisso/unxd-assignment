@@ -28,7 +28,6 @@ export const connectToMetaMask = async dispatch => {
         }
       }
     } else if (HELPERS.openedFromMobile()) {
-      window.location.href = WALLET.METAMASK_MOBILE_BROWSER;
       status = WALLET.CONNECTION_STATUSES.ON_MOBILE;
     } else {
       status = WALLET.CONNECTION_STATUSES.ONBOARDING;
@@ -47,7 +46,11 @@ export const connectToMetaMask = async dispatch => {
 };
 
 export const onboardMetaMask = () => {
-  metaMaskOnboarding();
+  if (HELPERS.openedFromMobile()) {
+    window.location.href = WALLET.METAMASK_MOBILE_BROWSER;
+  } else {
+    metaMaskOnboarding();
+  }
 };
 
 const metaMaskOnboarding = () => {

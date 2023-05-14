@@ -43,7 +43,15 @@ const HomePage = () => {
           </>
         );
       case WALLET.CONNECTION_STATUSES.ON_MOBILE:
-        return <p>Mobile onboarding</p>;
+        return (
+          <>
+            <p>You will be redirected to Install/Open MetaMask app</p>
+            <p>
+              If the app is not installed, complete the steps and get back to us
+            </p>
+            <CustomButton title="Go to MetaMask" handler={handleOnboarding} />
+          </>
+        );
       case WALLET.CONNECTION_STATUSES.CANCELLED:
         return <p>Cancelled</p>;
       case WALLET.CONNECTION_STATUSES.ERROR:
@@ -54,14 +62,6 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    const vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-
-    window.addEventListener('resize', () => {
-      const vh = window.innerHeight * 0.01;
-      document.documentElement.style.setProperty('--vh', `${vh}px`);
-    });
-
     const { body } = document;
 
     if (navigator.userAgent.indexOf('MetaMaskMobile') !== -1) {

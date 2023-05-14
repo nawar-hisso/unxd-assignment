@@ -15,6 +15,11 @@ const COLLECTION_CLASSES = {
     MIN: 751,
     MAX: Number.POSITIVE_INFINITY,
   },
+  GLASS_BOX: {
+    NAME: 'GLASS_BOX',
+    MIN: 0,
+    MAX: 0,
+  },
 };
 
 const COMMON = { APP_NAME, COLLECTION_CLASSES };
