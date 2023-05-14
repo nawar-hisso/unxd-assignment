@@ -32,6 +32,16 @@
     "prettier"
   ],
   "rules": {
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelComponents": [],
+        "labelAttributes": [],
+        "controlComponents": [],
+        "assert": "either",
+        "depth": 25
+      }
+    ],
     "quotes": [
       "error",
       "single",
