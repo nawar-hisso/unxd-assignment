@@ -4,7 +4,10 @@ import { useDispatch } from 'react-redux';
 import video from '../../../Assets/boxes_kaxrbj.gif';
 import Prompt from '../../Molecules/Prompt/Prompt';
 import CustomButton from '../../Atoms/CustomButton/CustomButton';
-import { connectToMetaMask, onboardMetaMask } from '../../../Actions/MetaMask';
+import {
+  connectToMetaMask,
+  onboardMetaMask,
+} from '../../../Actions/MetaMask/MetaMask';
 import WALLET from '../../../Configs/Wallet';
 
 const HomePage = () => {
@@ -75,7 +78,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <div className="home">
+    <div className="home" data-testid="home-page">
       <div className="home-inside">
         <div className="gif-center">
           <img
@@ -103,12 +106,18 @@ const HomePage = () => {
               title="Connect Wallet"
               handler={connectWallet}
               isDisabled={connectWalletIsDisabled}
+              data-testid="connect-wallet-button"
             />
           </div>
         </div>
       </div>
 
-      <Prompt title="Prompt" show={promptOpen} onClose={handlePrompt}>
+      <Prompt
+        title="Prompt"
+        show={promptOpen}
+        onClose={handlePrompt}
+        data-testid="prompt"
+      >
         {renderModalContent()}
       </Prompt>
     </div>

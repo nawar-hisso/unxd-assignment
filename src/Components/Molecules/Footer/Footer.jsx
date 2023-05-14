@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <div className="footer">
       <div className="in-footer">
-        <div className="footer-left">
+        <div className="footer-left" data-testid="footer-left">
           <img src={whiteLogo} alt="white_logo" />
           <p>
             UNXD (&apos;Uncrossed) is a marketplace for digitally <br />{' '}
             authentic art, fashion, and experiences.{' '}
           </p>
         </div>
-        <div className="footer-center">
+        <div className="footer-center" data-testid="footer-center">
           <h1>Navigate</h1>
           <div className="footer-center-content">
             <p>Drops</p>
@@ -25,7 +25,7 @@ const Footer = () => {
             <p>Help Center</p>
           </div>
         </div>
-        <div className="footer-right">
+        <div className="footer-right" data-testid="footer-right">
           <h1>Newsletter</h1>
           <p>
             Join our mailing list to stay in the loop with our newest feature
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="footer-last">
+      <div className="footer-last" data-testid="footer-last">
         <p>Privacy</p>
         <p>Terms of Service</p>
         <p>Report a Bug</p>

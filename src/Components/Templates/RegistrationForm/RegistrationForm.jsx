@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 import CollectionDetails from '../../Atoms/CollectionDetails/CollectionDetails';
 import Form from '../../Molecules/Form/Form';
 import ROUTES_NAMES from '../../../Configs/RoutesNames';
-import { setFormSubmitted } from '../../../Actions/App';
+import { setFormSubmitted } from '../../../Actions/App/App';
 
 const RegistrationForm = () => {
   const navigate = useNavigate();

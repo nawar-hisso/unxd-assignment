@@ -1,4 +1,4 @@
-import ACTION_TYPES from '../Configs/ActionTypes';
+import ACTION_TYPES from '../../Configs/ActionTypes';
 
 export function setWallet(dispatch, wallet) {
   const action = {

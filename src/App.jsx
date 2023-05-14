@@ -8,7 +8,7 @@ import {
   changeChainListener,
   changeWalletListener,
   insureRightChain,
-} from './Actions/MetaMask';
+} from './Actions/MetaMask/MetaMask';
 import Header from './Components/Molecules/Header/Header';
 import Footer from './Components/Molecules/Footer/Footer';
 import HomePage from './Components/Templates/HomePage/HomePage';

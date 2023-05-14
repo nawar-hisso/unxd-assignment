@@ -8,6 +8,10 @@ const Prompt = ({ title, show, onClose, children }) => {
     }
   };
 
+  if (!show) {
+    return null;
+  }
+
   return (
     <div
       className={`modal ${show ? 'show' : ''}`}

@@ -1,9 +1,9 @@
 import MetaMaskOnboarding from '@metamask/onboarding';
 import { ethers, utils } from 'ethers';
-import WALLET from '../Configs/Wallet';
-import HELPERS from '../Utils/Helpers';
-import { setWallet } from './App';
-import { fetchNFTs } from '../APIs/Infura';
+import WALLET from '../../Configs/Wallet';
+import HELPERS from '../../Utils/Helpers';
+import { setWallet } from '../App/App';
+import { fetchNFTs } from '../../APIs/Infura';
 
 const onboarding = new MetaMaskOnboarding({
   forwarderOrigin: WALLET.REDIRECT_URI,
