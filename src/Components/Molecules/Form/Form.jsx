@@ -1,6 +1,7 @@
 import './Form.css';
 import { useSelector } from 'react-redux';
 import { useState } from 'react';
+import { saveAs } from 'file-saver';
 import FormInput from '../../Atoms/FormInput/FormInput';
 import CustomButton from '../../Atoms/CustomButton/CustomButton';
 import HELPERS from '../../../Utils/Helpers';
@@ -31,14 +32,8 @@ const Form = ({ handleForm }) => {
 
     const json = JSON.stringify(formData);
     const blob = new Blob([json], { type: 'octet/stream' });
-    const url = window.URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `${COMMON.DOWNLOADED_FILE_NAME}.txt`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    window.URL.revokeObjectURL(url);
+
+    saveAs(blob, `${COMMON.DOWNLOADED_FILE_NAME}.txt`);
     handlePrompt();
   };
 
