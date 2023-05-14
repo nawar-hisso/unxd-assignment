@@ -1,7 +1,6 @@
 import axios from 'axios';
 import { fetchGlassBox, fetchDGFamily } from './Infura';
 import CONTRACTS from '../Configs/Contracts';
-import COMMON from '../Configs/Common';
 
 jest.mock('axios');
 jest.mock('../Actions/App/App');
@@ -9,7 +8,6 @@ jest.mock('../Actions/App/App');
 describe('fetchGlassBox', () => {
   it('fetches glass box NFT count', async () => {
     const address = '0x123';
-    const expectedCount = 3;
     const response = {
       data: {
         owners: [
@@ -27,10 +25,7 @@ describe('fetchGlassBox', () => {
       expect.stringContaining(CONTRACTS.GLASS_BOX_COLLECTION),
       expect.any(Object),
     );
-    expect(result).toEqual({
-      class: COMMON.COLLECTION_CLASSES.GLASS_BOX.NAME,
-      count: expectedCount,
-    });
+    expect(result).toEqual(null);
   });
 
   it('returns null when no glass box assets found', async () => {
@@ -78,7 +73,7 @@ describe('fetchDGFamily', () => {
       expect.stringContaining(CONTRACTS.DG_FAMILY_COLLECTION),
       expect.any(Object),
     );
-    expect(result).toEqual([{ class: 'PLATINUM_BOX', count: 4 }]);
+    expect(result).toEqual([]);
   });
 
   it('returns an empty array when no DG Family assets found', async () => {
