@@ -1,3 +1,5 @@
+import COMMON from '../Configs/Common';
+
 const isMetaMaskInstalled = () =>
   Boolean(window.ethereum && window.ethereum.isMetaMask);
 
@@ -6,6 +8,8 @@ const openedFromMobile = () =>
     navigator.userAgent,
   );
 
-const HELPERS = { isMetaMaskInstalled, openedFromMobile };
+const checkValidEmail = email => COMMON.EMAIL_REGEX.test(email);
+
+const HELPERS = { isMetaMaskInstalled, openedFromMobile, checkValidEmail };
 
 export default HELPERS;
