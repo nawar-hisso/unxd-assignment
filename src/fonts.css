@@ -1,0 +1,34 @@
+@font-face {
+  font-family: 'LabGrotesque-Regular';
+  src: url('./Assets/Fonts/LabGrotesque-Regular.woff2') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LabGrotesque-Thin';
+  src: url('./Assets/Fonts/LabGrotesque-Thin.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LabGrotesque-LightItalic';
+  src: url('./Assets/Fonts/LabGrotesque-LightItalic.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'GothiaSerif-Bold';
+  src: url('./Assets/Fonts/GothiaSerif-Bold.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Jura-Light';
+  src: url('./Assets/Fonts/Jura-Light.woff') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
