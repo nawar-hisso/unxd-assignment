@@ -17,8 +17,8 @@
   font-family: 'GothiaSerif-Bold';
 }
 
-@media screen and (max-width: 650px) {
-  @media screen and (max-width: 650px) {
+@media screen and (max-device-width: 650px) {
+  @media screen and (max-device-width: 650px) {
     .request-sent-content {
       width: 90vw;
     }

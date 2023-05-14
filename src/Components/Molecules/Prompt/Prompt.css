@@ -27,7 +27,7 @@
   background: #fff;
   border-radius: 0;
   width: 80%;
-  max-width: 500px;
+  max-device-width: 500px;
   padding: 20px;
   position: relative;
   animation: modal-show 0.3s;
