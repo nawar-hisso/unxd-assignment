@@ -16,8 +16,8 @@
   text-align: center;
 }
 
-@media screen and (max-device-width: 650px) {
-  @media screen and (max-device-width: 650px) {
+@media screen and (max-width: 650px) {
+  @media screen and (max-width: 650px) {
     .registration-form-content {
       width: 90vw;
     }
