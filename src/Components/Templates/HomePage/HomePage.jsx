@@ -54,15 +54,9 @@ const HomePage = () => {
   };
 
   useEffect(() => {
-    // eslint-disable-next-line no-alert
-    //alert(`Client: ${navigator.userAgent}`);
-    // eslint-disable-next-line no-alert
-    // alert(`Height: ${window.innerHeight} - Width: ${window.innerWidth}`);
-    // Set a CSS variable with the actual height of the viewport
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-    // Update the value when the window is resized
     window.addEventListener('resize', () => {
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
