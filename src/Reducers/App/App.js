@@ -9,6 +9,8 @@ const app = (state = appInitialState, action = () => {}) => {
       return { ...state, wallet: action.payload };
     case ACTION_TYPES.APP.SET_COLLECTIONS:
       return { ...state, collections: action.payload };
+    case ACTION_TYPES.APP.SET_FORM_SUBMITTED:
+      return { ...state, formSubmitted: action.payload };
     default:
       return state;
   }

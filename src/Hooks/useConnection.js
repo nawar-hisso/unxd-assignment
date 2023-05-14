@@ -10,7 +10,10 @@ export function useConnection() {
 
   useEffect(() => {
     if (app?.wallet && app?.collections?.length > 0) {
-      if (location.pathname === ROUTES_NAMES.HOME) {
+      if (
+        location.pathname === ROUTES_NAMES.HOME ||
+        (location.pathname === ROUTES_NAMES.REQUEST_SENT && !app?.formSubmitted)
+      ) {
         navigate(ROUTES_NAMES.REGISTRATION_FORM);
       }
     } else {

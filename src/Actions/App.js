@@ -17,3 +17,12 @@ export function setCollections(dispatch, collections) {
 
   dispatch(action);
 }
+
+export function setFormSubmitted(dispatch, isFormSubmitted) {
+  const action = {
+    type: ACTION_TYPES.APP.SET_FORM_SUBMITTED,
+    payload: isFormSubmitted,
+  };
+
+  dispatch(action);
+}
