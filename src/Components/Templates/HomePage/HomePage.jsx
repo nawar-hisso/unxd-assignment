@@ -42,6 +42,8 @@ const HomePage = () => {
             <CustomButton title="Install MetaMask" handler={handleOnboarding} />
           </>
         );
+      case WALLET.CONNECTION_STATUSES.ON_MOBILE:
+        return <p>Mobile onboarding</p>;
       case WALLET.CONNECTION_STATUSES.CANCELLED:
         return <p>Cancelled</p>;
       case WALLET.CONNECTION_STATUSES.ERROR:
