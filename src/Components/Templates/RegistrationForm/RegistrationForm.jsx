@@ -1,9 +1,15 @@
 import './RegistrationForm.css';
+import { useNavigate } from 'react-router-dom';
 import CollectionDetails from '../../Atoms/CollectionDetails/CollectionDetails';
 import Form from '../../Molecules/Form/Form';
+import ROUTES_NAMES from '../../../Configs/RoutesNames';
 
 const RegistrationForm = () => {
-  const handleSubmit = () => {};
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    navigate(ROUTES_NAMES.REQUEST_SENT);
+  };
 
   return (
     <div className="registration-form">
