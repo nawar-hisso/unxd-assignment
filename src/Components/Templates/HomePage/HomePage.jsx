@@ -57,7 +57,7 @@ const HomePage = () => {
     // eslint-disable-next-line no-alert
     //alert(`Client: ${navigator.userAgent}`);
     // eslint-disable-next-line no-alert
-    alert(`Height: ${window.innerHeight} - Width: ${window.innerWidth}`);
+    // alert(`Height: ${window.innerHeight} - Width: ${window.innerWidth}`);
     // Set a CSS variable with the actual height of the viewport
     const vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
@@ -67,6 +67,14 @@ const HomePage = () => {
       const vh = window.innerHeight * 0.01;
       document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
+
+    const { body } = document;
+
+    if (navigator.userAgent.indexOf('MetaMaskMobile') !== -1) {
+      body.classList.add('MetaMaskMobile');
+    } else {
+      body.classList.remove('MetaMaskMobile');
+    }
   }, []);
 
   return (
