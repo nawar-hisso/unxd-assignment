@@ -5,7 +5,6 @@ import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import ROUTES_NAMES from './Configs/RoutesNames';
 import {
-  changeChainListener,
   changeWalletListener,
   insureRightChain,
 } from './Actions/MetaMask/MetaMask';
@@ -24,10 +23,6 @@ const App = () => {
   useEffect(() => {
     changeWalletListener(dispatch);
   }, [dispatch]);
-
-  useEffect(() => {
-    changeChainListener();
-  }, []);
 
   useEffect(() => {
     insureRightChain();
