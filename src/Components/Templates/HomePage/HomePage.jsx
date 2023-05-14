@@ -1,5 +1,5 @@
 import './HomePage.css';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import video from '../../../Assets/boxes_kaxrbj.gif';
 import Prompt from '../../Molecules/Prompt/Prompt';
@@ -52,6 +52,20 @@ const HomePage = () => {
         return null;
     }
   };
+
+  useEffect(() => {
+    alert('Client: ', navigator.userAgent);
+    alert('Height: ', window.innerHeight, ' - Width: ', window.innerWidth);
+    // Set a CSS variable with the actual height of the viewport
+    const vh = window.innerHeight * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // Update the value when the window is resized
+    window.addEventListener('resize', () => {
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+  }, []);
 
   return (
     <div className="home">
