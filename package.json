@@ -21,7 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "react-scripts build && copyfiles _redirects build",
     "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
     "eject": "react-scripts eject",
     "lint": "eslint --ext .js src && eslint --ext .jsx src",
@@ -52,6 +52,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
+    "copyfiles": "^2.4.1",
     "eslint": "^8.40.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.8.0",
