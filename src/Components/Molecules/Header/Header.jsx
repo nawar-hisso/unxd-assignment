@@ -14,17 +14,28 @@ import {
 } from '../../../Actions/App/App';
 import HELPERS from '../../../Utils/Helpers';
 
+/**
+ * Header component that renders the navigation bar at the top of the page.
+ *
+ * @returns {JSX.Element} The rendered Header component.
+ */
 const Header = () => {
   const dispatch = useDispatch();
   const { app } = useSelector(state => state);
   const [showDropdown, setShowDropdown] = useState(false);
 
+  /**
+   * Toggles the visibility of the dropdown menu.
+   */
   const toggleDropdown = () => {
     if (app?.wallet) {
       setShowDropdown(!showDropdown);
     }
   };
 
+  /**
+   * Handles the log out action by resetting the app state and closing the dropdown menu.
+   */
   const handleLogOut = () => {
     setWallet(dispatch, '');
     setCollections(dispatch, []);
@@ -100,7 +111,7 @@ const Header = () => {
                 {showDropdown && (
                   <div className="dropdown">
                     <button type="button" onClick={handleLogOut}>
-                      Log Out
+                      Disconnect
                     </button>
                   </div>
                 )}

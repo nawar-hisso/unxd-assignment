@@ -5,6 +5,12 @@ import WALLET from '../Configs/Wallet';
 import { setCollections } from '../Actions/App/App';
 import COMMON from '../Configs/Common';
 
+/**
+ * Fetches the Glass Box NFTs owned by a given address.
+ *
+ * @param {string} address - The address to check for NFT ownership.
+ * @return {Object|null} The number of Glass Box NFTs owned by the address.
+ */
 export const fetchGlassBox = async address => {
   let glassBoxCount = null;
 
@@ -42,6 +48,12 @@ export const fetchGlassBox = async address => {
   }
 };
 
+/**
+ * Fetches the DG Family NFTs owned by a given address and classifies them.
+ *
+ * @param {string} address - The address to check for NFT ownership.
+ * @return {Array} An array of objects, each containing the class of NFT and the count owned by the address.
+ */
 export const fetchDGFamily = async address => {
   const Auth = Buffer.from(
     `${CONSTANTS.INFURA_API_KEY}:${CONSTANTS.INFURA_API_SECRET_KEY}`,
@@ -111,6 +123,13 @@ export const fetchDGFamily = async address => {
   }
 };
 
+/**
+ * Fetches all the NFTs (Glass Box and DG Family) owned by a given address.
+ *
+ * @param {Function} dispatch - The dispatch function from Redux.
+ * @param {string} address - The address to check for NFT ownership.
+ * @return {Array} An array of objects, each containing the class of NFT and the count owned by the address.
+ */
 export const fetchNFTs = async (dispatch, address) => {
   try {
     const glassBox = await fetchGlassBox(address);

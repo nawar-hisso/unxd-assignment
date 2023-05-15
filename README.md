@@ -40,6 +40,7 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 - ESLint 🚨
 - Prettier 🎨
 - Jest 🃏
+- JSDocs 🎗️
 - Netlify ☁️
 
 ### 📱 Responsive Design
