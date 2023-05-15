@@ -8,21 +8,29 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 
 ![UNXD Event React App Screenshot](./public/logo_dark.png)
 
+### 📚 Table of Contents
+
+- [Features](#-features)
+- [Tech Stack](#️-tech-stack)
+- [Responsive Design](#-responsive-design)
+- [Prerequisites](#prerequisites)
+- [Getting Started](#-getting-started)
+- [Testing and Linting](#-testing-and-linting)
+- [Husky Pre-commit](#-husky-pre-commit)
+- [Deployment](#-deployment)
+- [How to Use](#️-how-to-use)
+- [Contact](#-contact)
+- [Contributing](#-contributing)
+- [License](#-license)
+- [Show Your Support](#show-your-support)
+- [Acknowledgments](#acknowledgments)
+
 ### 🎯 Features
 
 - Wallet Connect functionality compatible with all devices 📱💻
 - Prompt for users without Metamask to install the extension/app 👛
 - Token-gated event form accessible for users with specific NFTs 🎟
 - User-friendly and intuitive app design 📝
-
-### 📚 Table of Contents
-
-- [Features](#features-)
-- [Tech Stack](#tech-stack-)
-- [Getting Started](#getting-started-)
-- [Testing and Deployment](#testing-and-deployment-)
-- [Contributing](#contributing-)
-- [License](#license-)
 
 ### 🛠️ Tech Stack
 
@@ -145,7 +153,7 @@ This project is licensed under the MIT License. See [LICENSE](LICENSE) file for 
 
 ### Show your support
 
-Give a ⭐️ if this project helped you!
+Give a ⭐️ if you like this solution!
 
 ### Acknowledgments
 
