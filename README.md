@@ -47,7 +47,7 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 I've designed the UNXD Event React App to be fully responsive 😄👍🏼📱💻
 No matter what device you're on, whether it's a mobile phone, tablet, or desktop, this app adjusts beautifully to the screen size, ensuring a seamless user experience.
 
-### Prerequisites
+### 📋 Prerequisites
 
 - Node.js v16.14.0 or later
 - Metamask Wallet
@@ -66,7 +66,7 @@ To run the app locally, follow these steps:
 1. Clone the repository:
 
 ```bash
-   git clone https://github.com/yourusername/unxd-assignment.git
+git clone https://github.com/yourusername/unxd-assignment.git
 ```
 
 2. Install dependencies:
