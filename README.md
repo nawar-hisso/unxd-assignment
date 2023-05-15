@@ -34,13 +34,13 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 
 ### 🛠️ Tech Stack
 
-- React: React ⚛️
-- ethers.js: ethers.js 🔗
-- Solidity: Solidity 📜
-- ESLint: ESLint 🚨
-- Prettier: Prettier 🎨
-- Jest: Jest 🃏
-- Netlify: Netlify ☁️
+- React ⚛️
+- ethers.js 🔗
+- Solidity 📜
+- ESLint 🚨
+- Prettier 🎨
+- Jest 🃏
+- Netlify ☁️
 
 ### 📱 Responsive Design
 
