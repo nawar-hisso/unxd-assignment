@@ -6,6 +6,11 @@ import twitter from '../../../Assets/twitter.svg';
 import link from '../../../Assets/link.svg';
 import ROUTES_NAMES from '../../../Configs/RoutesNames';
 
+/**
+ * Footer component that renders the footer section of the page.
+ *
+ * @returns {JSX.Element} The rendered Footer component.
+ */
 const Footer = () => {
   return (
     <div className="footer">

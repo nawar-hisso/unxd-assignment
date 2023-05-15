@@ -5,8 +5,15 @@ import HELPERS from '../../Utils/Helpers';
 import { setWallet } from '../App/App';
 import { fetchNFTs } from '../../APIs/NFTs';
 
+// Instantiate onboarding for MetaMask
 const onboarding = new MetaMaskOnboarding();
 
+/**
+ * Connect to MetaMask wallet.
+ *
+ * @param {Function} dispatch - The dispatch function from Redux.
+ * @return {string} status - The connection status.
+ */
 export const connectToMetaMask = async dispatch => {
   let status = WALLET.CONNECTION_STATUSES.CONNECTED;
 
@@ -49,6 +56,9 @@ export const connectToMetaMask = async dispatch => {
   }
 };
 
+/**
+ * Start the onboarding process for MetaMask.
+ */
 export const onboardMetaMask = () => {
   if (HELPERS.openedFromMobile()) {
     window.location.href = WALLET.METAMASK_MOBILE_BROWSER;
@@ -57,10 +67,18 @@ export const onboardMetaMask = () => {
   }
 };
 
+/**
+ * Perform onboarding for MetaMask.
+ */
 const metaMaskOnboarding = () => {
   onboarding.startOnboarding();
 };
 
+/**
+ * Listen for changes in the wallet.
+ *
+ * @param {Function} dispatch - The dispatch function from Redux.
+ */
 export const changeWalletListener = dispatch => {
   if (HELPERS.isMetaMaskInstalled()) {
     const handleChangeAccount = async accounts => {
@@ -82,6 +100,9 @@ export const changeWalletListener = dispatch => {
   }
 };
 
+/**
+ * Listen for changes in the chain.
+ */
 export const changeChainListener = () => {
   if (HELPERS.isMetaMaskInstalled()) {
     const handleChangeChain = async () => {
@@ -92,6 +113,11 @@ export const changeChainListener = () => {
   }
 };
 
+/**
+ * Get the chain ID.
+ *
+ * @return {number} chainId - The chain ID.
+ */
 const getChainId = async () => {
   try {
     const provider = new ethers.providers.Web3Provider(window.ethereum, 'any');
@@ -102,6 +128,9 @@ const getChainId = async () => {
   }
 };
 
+/**
+ * Switch to the correct chain.
+ */
 const switchChain = async () => {
   try {
     await window.ethereum.request({
@@ -119,6 +148,9 @@ const switchChain = async () => {
   }
 };
 
+/**
+ * Add Ethereum network to MetaMask.
+ */
 const addEthereumNetwork = async () => {
   try {
     await window.ethereum.request({
@@ -142,6 +174,9 @@ const addEthereumNetwork = async () => {
   }
 };
 
+/**
+ * Ensure the correct chain is being used.
+ */
 export const insureRightChain = async () => {
   const chainId = await getChainId();
   if (chainId !== WALLET.CHAIN.ID) {

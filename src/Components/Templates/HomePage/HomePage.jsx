@@ -10,6 +10,11 @@ import {
 } from '../../../Actions/MetaMask/MetaMask';
 import WALLET from '../../../Configs/Wallet';
 
+/**
+ * HomePage component that represents the home page of the application.
+ *
+ * @returns {JSX.Element} The rendered HomePage component.
+ */
 const HomePage = () => {
   const dispatch = useDispatch();
   const [promptOpen, setPromptOpen] = useState(false);
@@ -18,15 +23,24 @@ const HomePage = () => {
     WALLET.CONNECTION_STATUSES.CONNECTED,
   );
 
+  /**
+   * Toggles the prompt dialog open and closed.
+   */
   const handlePrompt = () => {
     setPromptOpen(!promptOpen);
   };
 
+  /**
+   * Handles the onboarding process for MetaMask.
+   */
   const handleOnboarding = () => {
     onboardMetaMask();
     handlePrompt();
   };
 
+  /**
+   * Connects the wallet to MetaMask.
+   */
   const connectWallet = async () => {
     setConnectWalletIsDisabled(true);
     const connection = await connectToMetaMask(dispatch);
@@ -35,6 +49,10 @@ const HomePage = () => {
     setConnectWalletIsDisabled(false);
   };
 
+  /**
+   * Renders the content of the prompt dialog based on the connection status.
+   * @returns {JSX.Element|null} The rendered content of the prompt dialog.
+   */
   const renderModalContent = () => {
     switch (connectionStatus) {
       case WALLET.CONNECTION_STATUSES.CONNECTED:
@@ -67,13 +85,17 @@ const HomePage = () => {
     }
   };
 
+  /**
+   * Adds or removes the class 'MetaMaskMobile' to the body element based on the user agent string.
+   */
   useEffect(() => {
     const { body } = document;
 
+    // Check if the user agent contains 'MetaMaskMobile'
     if (navigator.userAgent.indexOf('MetaMaskMobile') !== -1) {
-      body.classList.add('MetaMaskMobile');
+      body.classList.add('MetaMaskMobile'); // Add the class 'MetaMaskMobile' to the body element
     } else {
-      body.classList.remove('MetaMaskMobile');
+      body.classList.remove('MetaMaskMobile'); // Remove the class 'MetaMaskMobile' from the body element
     }
   }, []);
 

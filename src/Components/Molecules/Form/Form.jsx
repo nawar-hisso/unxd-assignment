@@ -7,7 +7,13 @@ import CustomButton from '../../Atoms/CustomButton/CustomButton';
 import HELPERS from '../../../Utils/Helpers';
 import Prompt from '../Prompt/Prompt';
 import COMMON from '../../../Configs/Common';
-
+/**
+ * Form component that renders a form for user input and data submission.
+ *
+ * @param {Object} props - The component props.
+ * @param {Function} props.handleForm - The callback function to handle form submission.
+ * @returns {JSX.Element} The rendered Form component.
+ */
 const Form = ({ handleForm }) => {
   const { app } = useSelector(state => state);
 
@@ -20,10 +26,16 @@ const Form = ({ handleForm }) => {
   const [lastName, setLastName] = useState('');
   const [walletAddress, setWalletAddress] = useState(app?.wallet);
 
+  /**
+   * Toggles the prompt modal open or closed.
+   */
   const handlePrompt = () => {
     setPromptOpen(!promptOpen);
   };
 
+  /**
+   * Downloads the form data as a text file.
+   */
   const downloadData = () => {
     const formData = { email, firstName, lastName, walletAddress };
     app?.collections?.forEach(collection => {
@@ -37,6 +49,10 @@ const Form = ({ handleForm }) => {
     handlePrompt();
   };
 
+  /**
+   * Renders the content of the prompt modal based on the current form status.
+   * @returns {JSX.Element} The rendered content of the prompt modal.
+   */
   const renderModalContent = () => {
     switch (formStatus) {
       case COMMON.FORM_STATUSES.INPUT_REQUIRED:
@@ -48,6 +64,10 @@ const Form = ({ handleForm }) => {
     }
   };
 
+  /**
+   * Handles input change events and updates the corresponding form state.
+   * @param {Object} event - The input change event.
+   */
   const handleInputChange = event => {
     const { id, value } = event.target;
 
@@ -69,6 +89,9 @@ const Form = ({ handleForm }) => {
     }
   };
 
+  /**
+   * Submits the form data and triggers the necessary actions based on the input values.
+   */
   const submitForm = () => {
     handlePrompt();
     if (email && firstName && lastName && walletAddress) {
