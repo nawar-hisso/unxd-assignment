@@ -54,10 +54,10 @@ No matter what device you're on, whether it's a mobile phone, tablet, or desktop
 - One of the following NFTs:
   - DGFamily Box:
     - Testnet: <a href='https://goerli.etherscan.io/address/0x96000D4457b9A380CAa979C243e1d65fcaC41D53' target='_blank'>0x96000D4457b9A380CAa979C243e1d65fcaC41D53</a>
-    - Mainnet: <a href='https://goerli.etherscan.io/address/0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC' target='_blank'>0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC</a>
+    - Mainnet: <a href='https://etherscan.io/address/0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC' target='_blank'>0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC</a>
   - Glass Box:
     - Testnet: <a href='https://goerli.etherscan.io/address/0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23' target='_blank'>0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23</a>
-    - Mainnet: <a href='https://goerli.etherscan.io/address/0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c' target='_blank'>0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c</a>
+    - Mainnet: <a href='https://etherscan.io/address/0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c' target='_blank'>0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c</a>
 
 ## 🚀 Getting Started
 
