@@ -133,11 +133,11 @@ Here are the steps to use the UNXD Event React App:
 
 Nawar Hisso
 
-- Email: nawwarhisso@gmail.com
-- Linkedin: https://www.linkedin.com/in/nawarhisso/
-- Facebook: https://www.facebook.com/nawwar.hisso/
-- Instagram: https://www.instagram.com/iam.nawar/
-- Twitter: https://twitter.com/HissoNawar
+- [Email](mailto:nawwarhisso@gmail.com) 📧
+- <a href='https://www.linkedin.com/in/nawarhisso/' target='_blank'>Linkedin</a> 🌐
+- <a href='https://www.facebook.com/nawwar.hisso/' target='_blank'>Facebook</a> 👤
+- <a href='https://www.instagram.com/iam.nawar/' target='_blank'>Instagram</a> 📷
+- <a href='https://twitter.com/HissoNawar' target='_blank'>Twitter</a> 🐦
 
 ### 🤝 Contributing
 
