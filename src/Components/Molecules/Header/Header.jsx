@@ -7,7 +7,11 @@ import search from '../../../Assets/search.svg';
 import notification from '../../../Assets/notification.svg';
 import profile from '../../../Assets/profile.svg';
 import ROUTES_NAMES from '../../../Configs/RoutesNames';
-import { setWallet } from '../../../Actions/App/App';
+import {
+  setCollections,
+  setFormSubmitted,
+  setWallet,
+} from '../../../Actions/App/App';
 import HELPERS from '../../../Utils/Helpers';
 
 const Header = () => {
@@ -23,6 +27,8 @@ const Header = () => {
 
   const handleLogOut = () => {
     setWallet(dispatch, '');
+    setCollections(dispatch, []);
+    setFormSubmitted(dispatch, false);
     toggleDropdown();
   };
 
