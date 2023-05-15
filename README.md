@@ -2,8 +2,8 @@
 
 Hello there! 👋
 
-I am excited to share with you the completion of the UNXD Event React App assignment.
-The app is built to connect users' Metamask wallets, enabling them to participate in UNXD events.
+I am excited to share with you the completion of the UNXD Event React App assignment. <br />
+The app is built to connect users' Metamask wallets, enabling them to participate in UNXD events. <br />
 Users are also able to access an exclusive event form if they hold specific NFTs in their wallets.
 
 ![UNXD Event React App Screenshot](./public/logo_dark.png)
@@ -44,7 +44,7 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 
 ### 📱 Responsive Design
 
-I've designed the UNXD Event React App to be fully responsive 😄👍🏼📱💻
+I've designed the UNXD Event React App to be fully responsive 😄👍🏼📱💻 <br />
 No matter what device you're on, whether it's a mobile phone, tablet, or desktop, this app adjusts beautifully to the screen size, ensuring a seamless user experience.
 
 ### 📋 Prerequisites
