@@ -1,6 +1,6 @@
 import { ethers } from 'ethers';
 import { setWallet } from '../App/App';
-import { fetchNFTs } from '../../APIs/Infura';
+import { fetchNFTs } from '../../APIs/NFTs';
 import {
   connectToMetaMask,
   changeWalletListener,
@@ -13,7 +13,7 @@ import HELPERS from '../../Utils/Helpers';
 jest.mock('@metamask/onboarding');
 jest.mock('ethers');
 jest.mock('../App/App');
-jest.mock('../../APIs/Infura');
+jest.mock('../../APIs/NFTs');
 jest.mock('../../Utils/Helpers');
 
 const mockDispatch = jest.fn();

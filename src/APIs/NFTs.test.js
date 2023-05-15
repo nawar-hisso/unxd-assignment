@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { fetchGlassBox, fetchDGFamily } from './Infura';
+import { fetchGlassBox, fetchDGFamily } from './NFTs';
 import CONTRACTS from '../Configs/Contracts';
 
 jest.mock('axios');

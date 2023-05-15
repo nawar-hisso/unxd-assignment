@@ -3,7 +3,7 @@ import { ethers, utils } from 'ethers';
 import WALLET from '../../Configs/Wallet';
 import HELPERS from '../../Utils/Helpers';
 import { setWallet } from '../App/App';
-import { fetchNFTs } from '../../APIs/Infura';
+import { fetchNFTs } from '../../APIs/NFTs';
 
 const onboarding = new MetaMaskOnboarding();
 
