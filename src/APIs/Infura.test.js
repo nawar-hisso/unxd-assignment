@@ -25,7 +25,7 @@ describe('fetchGlassBox', () => {
       expect.stringContaining(CONTRACTS.GLASS_BOX_COLLECTION),
       expect.any(Object),
     );
-    expect(result).toEqual(null);
+    expect(result).toEqual({ class: 'GLASS_BOX', count: 3 });
   });
 
   it('returns null when no glass box assets found', async () => {
@@ -73,7 +73,12 @@ describe('fetchDGFamily', () => {
       expect.stringContaining(CONTRACTS.DG_FAMILY_COLLECTION),
       expect.any(Object),
     );
-    expect(result).toEqual([]);
+    expect(result).toEqual([
+      {
+        class: 'PLATINUM_BOX',
+        count: 4,
+      },
+    ]);
   });
 
   it('returns an empty array when no DG Family assets found', async () => {
