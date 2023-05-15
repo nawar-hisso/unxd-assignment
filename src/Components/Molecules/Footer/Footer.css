@@ -1,0 +1,102 @@
+.footer {
+  font-family: 'LabGrotesque-Thin';
+  background-color: #121212;
+  margin: 0;
+  padding: 0;
+}
+
+.in-footer {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 100px 0;
+}
+
+.footer-left p {
+  margin-top: 30px;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.footer-center h1 {
+  font-family: 'Jura-Light';
+  color: white;
+  font-size: 16px;
+}
+
+.footer-center-content {
+  color: #a0a0a0;
+  font-size: 16px;
+  line-height: 25px;
+}
+
+.footer-right h1 {
+  font-family: 'Jura-Light';
+  color: white;
+  font-size: 16px;
+}
+
+.footer-right p {
+  margin-top: 30px;
+  color: #a0a0a0;
+  font-size: 12px;
+}
+
+.msg {
+  margin-top: 50px;
+}
+
+.input {
+  padding: 10px;
+  border: 1px solid #4b4b4b;
+  border-radius: 2px;
+  background-color: transparent;
+}
+
+.subscribe {
+  font-family: 'Jura-Light';
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 5px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.footer-last {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: auto;
+  padding-bottom: 50px;
+}
+
+.footer-last p {
+  font-size: 12px;
+  color: #a0a0a0;
+}
+
+.icons {
+  display: flex;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+a {
+  color: white;
+}
+
+p a {
+  color: #a0a0a0;
+}
+
+@media screen and (max-width: 800px) {
+  .in-footer {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 0 100px 0;
+  }
+}
