@@ -96,8 +96,10 @@ The application has been deployed on Netlify with two separate environments:
 
 For the purpose of testing, I have deployed two smart contracts for DGFamily and GlassBox on the Goerli testnet. The addresses are:
 
-- DGFamily: 0x96000D4457b9A380CAa979C243e1d65fcaC41D53
-- GlassBox: 0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23
+- DGFamily: https://goerli.etherscan.io/address/0x96000D4457b9A380CAa979C243e1d65fcaC41D53
+- GlassBox: https://goerli.etherscan.io/address/0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23
+
+You can mint some NFTs from these contracts and test the application on the testnet.
 
 ### 🕹️ How to Use
 
