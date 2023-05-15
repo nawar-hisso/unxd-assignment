@@ -131,7 +131,7 @@ Here are the steps to use the UNXD Event React App:
 
 ### 👥 Contact
 
-Nawar Hisso
+&nbsp;&nbsp;<b>Nawar Hisso</b>
 
 - [Email](mailto:nawwarhisso@gmail.com) 📧
 - <a href='https://www.linkedin.com/in/nawarhisso/' target='_blank'>Linkedin</a> 🌐
