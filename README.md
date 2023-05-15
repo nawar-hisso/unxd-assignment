@@ -8,14 +8,14 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 
 ![UNXD Event React App Screenshot](./public/logo_dark.png)
 
-## 🎯 Features
+### 🎯 Features
 
 - Wallet Connect functionality compatible with all devices 📱💻
 - Prompt for users without Metamask to install the extension/app 👛
 - Token-gated event form accessible for users with specific NFTs 🎟
 - User-friendly and intuitive app design 📝
 
-## 📚 Table of Contents
+### 📚 Table of Contents
 
 - [Features](#features-)
 - [Tech Stack](#tech-stack-)
@@ -24,7 +24,7 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 - [Contributing](#contributing-)
 - [License](#license-)
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 - React: React ⚛️
 - ethers.js: ethers.js 🔗
@@ -33,6 +33,11 @@ Users are also able to access an exclusive event form if they hold specific NFTs
 - Prettier: Prettier 🎨
 - Jest: Jest 🃏
 - Netlify: Netlify ☁️
+
+### 📱 Responsive Design
+
+I've designed the UNXD Event React App to be fully responsive 😄👍🏼📱💻
+No matter what device you're on, whether it's a mobile phone, tablet, or desktop, this app adjusts beautifully to the screen size, ensuring a seamless user experience.
 
 ### Prerequisites
 
@@ -71,7 +76,7 @@ npm start
 
 The app should now be running at http://localhost:3000/.
 
-## 🧪 Testing and Linting
+### 🧪 Testing and Linting
 
 To run tests and linting:
 
@@ -80,7 +85,7 @@ npm run test
 npm run lint
 ```
 
-## 💼 Husky Pre-commit
+### 💼 Husky Pre-commit
 
 This project uses Husky to ensure that all commits pass the linter. If your commit fails the lint check, you will need to fix the lint errors before you can commit.
 
@@ -105,15 +110,16 @@ You can mint some NFTs from these contracts and test the application on the test
 
 Here are the steps to use the UNXD Event React App:
 
-1. Open the app URL (either the testnet or mainnet version, depending on your purpose).
+1. Open the app URL (either the <a href='https://unxd-dev.netlify.app/' target='_blank'>development</a> or <a href='https://unxd.netlify.app/' target='_blank'>production</a> version, depending on your purpose).
 2. You'll be prompted to connect your Metamask wallet. Click on the "Connect Wallet" button.
 3. If you don't have Metamask installed, you'll see a message prompting you to install it.
+  - For mobile devices, you will be redirected to install Metamask application
 4. Once connected, if you have the required NFTs (DGFamily Box or Glass Box), you'll be able to access the event form.
 5. If you attempt to access the form without the required NFT, you'll see a prompt message.
 6. The event form displays information about the amount and type of the box you own.
 7. You can fill out the form as required, and the entered information will be saved in a text file.
 
-## 👥 Contact
+### 👥 Contact
 
 Nawar Hisso
 
@@ -123,7 +129,7 @@ Nawar Hisso
 - Instagram: https://www.instagram.com/iam.nawar/
 - Twitter: https://twitter.com/HissoNawar
 
-## 🤝 Contributing
+### 🤝 Contributing
 
 Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/YOUR_USERNAME/unxd-event-react-app/issues). To contribute:
 
@@ -133,14 +139,14 @@ Contributions, issues, and feature requests are welcome! Feel free to check [iss
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a pull request
 
-## 📄 License
+### 📄 License
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) file for more details.
 
-## Show your support
+### Show your support
 
 Give a ⭐️ if this project helped you!
 
-## Acknowledgments
+### Acknowledgments
 
 Happy Eventing! 🥳
