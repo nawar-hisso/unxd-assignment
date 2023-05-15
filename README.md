@@ -53,11 +53,11 @@ No matter what device you're on, whether it's a mobile phone, tablet, or desktop
 - Metamask Wallet
 - One of the following NFTs:
   - DGFamily Box:
-    - Testnet: 0x96000D4457b9A380CAa979C243e1d65fcaC41D53
-    - Mainnet: 0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC
+    - Testnet: <b>0x96000D4457b9A380CAa979C243e1d65fcaC41D53</b>
+    - Mainnet: <b>0xEb6C5acCafD8515c1b9E4c794bDC41532C5543EC</b>
   - Glass Box:
-    - Mainnet: 0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23
-    - Mainnet: 0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c
+    - Mainnet: <b>0xf53A0E3078c698b596D9bdCbADEd2ABcCd88De23</b>
+    - Mainnet: <b>0x68F4Ba8018216542Ac2Ab8125166Be66304DD71c</b>
 
 ## 🚀 Getting Started
 
@@ -121,7 +121,9 @@ Here are the steps to use the UNXD Event React App:
 1. Open the app URL (either the <a href='https://unxd-dev.netlify.app/' target='_blank'>development</a> or <a href='https://unxd.netlify.app/' target='_blank'>production</a> version, depending on your purpose).
 2. You'll be prompted to connect your Metamask wallet. Click on the "Connect Wallet" button.
 3. If you don't have Metamask installed, you'll see a message prompting you to install it.
-  - For mobile devices, you will be redirected to install Metamask application
+
+- For mobile devices, you will be redirected to install Metamask application
+
 4. Once connected, if you have the required NFTs (DGFamily Box or Glass Box), you'll be able to access the event form.
 5. If you attempt to access the form without the required NFT, you'll see a prompt message.
 6. The event form displays information about the amount and type of the box you own.
