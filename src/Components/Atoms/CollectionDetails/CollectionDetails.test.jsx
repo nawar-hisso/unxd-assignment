@@ -26,11 +26,11 @@ describe('CollectionDetails', () => {
 
     render(<CollectionDetails message="Hello" />);
 
-    expect(
-      screen.getByText(
-        'Hello You have 2 glass box, 1 black box, 4 gold box and 3 platinum boxes in your wallet.',
-      ),
-    ).toBeTruthy();
+    expect(screen.getByText(/Hello You have 2 glass box,/)).toBeTruthy();
+    expect(screen.getByText(/ 1 black box,/)).toBeTruthy();
+    expect(screen.getByText(/ 4 gold box/)).toBeTruthy();
+    expect(screen.getByText(/ and 3 platinum boxes/)).toBeTruthy();
+    expect(screen.getByText(/ in your wallet./)).toBeTruthy();
   });
 
   it('renders the collection details with zero counts when collections are empty', () => {
@@ -44,10 +44,10 @@ describe('CollectionDetails', () => {
 
     render(<CollectionDetails message="Hello" />);
 
-    expect(
-      screen.getByText(
-        'Hello You have 0 glass box, 0 black box, 0 gold box and 0 platinum boxes in your wallet.',
-      ),
-    ).toBeTruthy();
+    expect(screen.getByText(/Hello You have 0 glass box,/)).toBeTruthy();
+    expect(screen.getByText(/ 0 black box,/)).toBeTruthy();
+    expect(screen.getByText(/ 0 gold box/)).toBeTruthy();
+    expect(screen.getByText(/ and 0 platinum boxes/)).toBeTruthy();
+    expect(screen.getByText(/ in your wallet./)).toBeTruthy();
   });
 });
